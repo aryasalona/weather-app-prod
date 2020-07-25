@@ -8,6 +8,8 @@ const forecast = require("../src/utils/forecast");
 
 const app = express();
 
+port = process.env.PORT || 3000;
+
 const pathDirectory = path.join(__dirname, "../public");
 
 const viewsPath = path.join(__dirname, "../templates/views");
@@ -96,6 +98,6 @@ app.get("*", (req, res) => {
     message: " You have reached the error page"
   });
 });
-app.listen(3000, () => {
-  console.log("starting the server");
+app.listen(port, () => {
+  console.log("starting the server on port" + port);
 });

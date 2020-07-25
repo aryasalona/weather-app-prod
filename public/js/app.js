@@ -21,8 +21,8 @@ searchForm.addEventListener("submit", e => {
   console.log("Searching for ", inputValue);
   errorField.textContent = "Loading data ...";
   resultField.textContent = "";
-  const url = "http://localhost:3000/weather?address" + inputValue + "'";
-  fetch(`http://localhost:3000/weather?address=mumbai`, {
+  const url = "/weather?address" + inputValue + "'";
+  fetch(url, {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json"
